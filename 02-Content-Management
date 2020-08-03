@@ -90,5 +90,40 @@ wget -P /etc/pki/rpm-gpg/import/ https://www.centos.org/keys/RPM-GPG-KEY-CentOS-
     --download-policy "on_demand" \
     --gpg-key "RPM-GPG-KEY-CentOS-SIG-Storage" \
     --url "http://mirror.centos.org/centos-7/7/storage/x86_64/ceph-nautilus/" \
-    --mirror-on-sync "no
+    --mirror-on-sync "no"
 ```
+
+
+
+
+# Disconnected Channel / Contect Sync
+
+## Download Contect ISO from the mirror link, ( In my case we'll be using CentOS Everything ISO: http://centos.mirror.snu.edu.in/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-Everything-2003.iso )
+
+## Create a Diectory inside Foreman & Host the content of ISO Image via HTTPD.
+
+```
+mkdir -p /var/www/html/pub/sat-content
+mount -o loop CentOS-7-x86_64-Everything-2003.iso /var/www/html/pub/sat-content/
+```
+
+## Creating New Product from CLI using the hammer.
+```
+# hammer product create --organization-id 1 --name "CentOS7_Everything_Local" --description "CentOS7_Everything_Local"
+```
+
+## Creating Repositories
+
+### Repo 1: CentOS7_Everything_Local_Repo
+```
+# hammer repository create --organization-id 1 \
+   --product "CentOS7_Everything_Local" \
+   --name "CentOS7_Everything_Local_Repo" \
+   --label "CentOS7_Everything_Local_Repo" \
+   --content-type "yum" \
+   --download-policy "on_demand" \
+   --gpg-key "RPM-GPG-KEY-CentOS-7" \
+   --url "http://192.168.56.101/pub/sat-content/" \
+   --mirror-on-sync "no"
+```
+
