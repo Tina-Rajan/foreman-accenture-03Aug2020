@@ -75,3 +75,29 @@ Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 ```
 
 ## Now we can access our forman with the mentioend URL : https://server101.example.com  & Initial credentials are admin / redhat@123
+
+
+## List the Users
+```
+[root@server101 ~]# hammer user list
+---|--------------|---------------|----------------------------|-------|---------------------|--------------
+ID | LOGIN        | NAME          | EMAIL                      | ADMIN | LAST LOGIN          | AUTHORIZED BY
+---|--------------|---------------|----------------------------|-------|---------------------|--------------
+4  | admin        | Admin User    | root@example.com           | yes   | 2020/08/03 09:24:56 | Internal
+6  | exampleview  | example view  | exampleview@localhost      | no    | 2020/08/03 09:21:21 | Internal
+5  | exampleadmin | example admin | exampleadmin@localhost.com | no    | 2020/08/03 09:23:49 | Internal
+---|--------------|---------------|----------------------------|-------|---------------------|--------------
+[root@server101 ~]#
+```
+
+## List the Organizations 
+```
+[root@server101 ~]# hammer organization list
+---|----------------------|----------------------|-----------------------------------------|---------------------
+ID | TITLE                | NAME                 | DESCRIPTION                             | LABEL
+---|----------------------|----------------------|-----------------------------------------|---------------------
+1  | Default Organization | Default Organization |                                         | Default_Organization
+3  | Example Org          | Example Org          | This is the sample origination for demo | example-org
+---|----------------------|----------------------|-----------------------------------------|---------------------
+[root@server101 ~]#
+```
