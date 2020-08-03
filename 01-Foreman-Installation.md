@@ -66,9 +66,12 @@ Preparing installation Done
 ```
 
 ## Disable Linux System Firewall
-
+```
 [root@server101 ~]# iptables -F
 [root@server101 ~]# systemctl disable firewalld
 Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.
 Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 [root@server101 ~]#
+```
+
+## Now we can access our forman with the mentioend URL : https://server101.example.com  & Initial credentials are admin / redhat@123
