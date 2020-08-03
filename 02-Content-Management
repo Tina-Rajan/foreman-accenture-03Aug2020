@@ -1,0 +1,26 @@
+## 
+
+## Importing GPG Key for OS Repo
+After creating a product we need to import the GPG key for it. Follow below steps to import the key from CLI
+```
+# mkdir -p /etc/pki/rpm-gpg/import
+# wget -P /etc/pki/rpm-gpg/import/ http://mirror.centos.org/centos-7/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+```
+
+## To import the key for our organization, Run this command from the location where we have downloaded the GPG key.
+```
+hammer gpg create --organization-id 1 --key "RPM-GPG-KEY-CentOS-7" --name "RPM-GPG-KEY-CentOS-7"
+```
+
+## Creating Repositories
+```
+hammer repository create --organization-id 1 \
+   --product "CentOS 7 Linux x86_64" \
+   --name "CentOS 7 OS x86_64" \
+   --label "CentOS_7_OS_x86_64" \
+   --content-type "yum" \
+   --download-policy "on_demand" \
+   --gpg-key "RPM-GPG-KEY-CentOS-7" \
+   --url "http://mirror.centos.org/centos-7/7/os/x86_64/" \
+   --mirror-on-sync "no"
+```
