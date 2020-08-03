@@ -49,3 +49,18 @@ foreman-installer --scenario katello --foreman-initial-admin-username admin --fo
 --foreman-proxy-puppet true
 
 ```
+
+
+## Installation Finished
+```
+Preparing installation Done
+  Success!
+  * Foreman is running at https://server101.example.com
+      Initial credentials are admin / redhat@123
+  * To install an additional Foreman proxy on separate machine continue by running:
+
+      foreman-proxy-certs-generate --foreman-proxy-fqdn "$FOREMAN_PROXY" --certs-tar "/root/$FOREMAN_PROXY-certs.tar"
+  * Foreman Proxy is running at https://server101.example.com:9090
+  The full log is at /var/log/foreman-installer/katello.log
+[root@server101 ~]#
+```
