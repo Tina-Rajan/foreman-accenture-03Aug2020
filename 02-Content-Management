@@ -12,6 +12,11 @@ After creating a product we need to import the GPG key for it. Follow below step
 hammer gpg create --organization-id 1 --key "RPM-GPG-KEY-CentOS-7" --name "RPM-GPG-KEY-CentOS-7"
 ```
 
+## Creating Product from CLI using the hammer.
+```
+hammer product create --organization-id 1 --name "CentOS 7 Linux x86_64" --description "Repository for CentOS 7 Linux"
+```
+
 ## Creating Repositories
 ```
 hammer repository create --organization-id 1 \
