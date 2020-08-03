@@ -3,8 +3,11 @@
 
 
 ## Open Cmder : ssh root@192.168.56.101 
-## Username: root & Password: redhat
-
+## Credentials 
+```
+Username: root 
+Password: redhat
+```
 ## Enable Foreman & Respective Repos. 
 ```
 yum -y localinstall https://yum.theforeman.org/releases/2.0/el7/x86_64/foreman-release.rpm
