@@ -9,17 +9,18 @@ After creating a product we need to import the GPG key for it. Follow below step
 
 ## To import the key for our organization, Run this command from the location where we have downloaded the GPG key.
 ```
-hammer gpg create --organization-id 1 --key "RPM-GPG-KEY-CentOS-7" --name "RPM-GPG-KEY-CentOS-7"
+# cd /etc/pki/rpm-gpg/import
+# hammer gpg create --organization-id 1 --key "RPM-GPG-KEY-CentOS-7" --name "RPM-GPG-KEY-CentOS-7"
 ```
 
 ## Creating Product from CLI using the hammer.
 ```
-hammer product create --organization-id 1 --name "CentOS 7 Linux x86_64" --description "Repository for CentOS 7 Linux"
+# hammer product create --organization-id 1 --name "CentOS 7 Linux x86_64" --description "Repository for CentOS 7 Linux"
 ```
 
 ## Creating Repositories
 ```
-hammer repository create --organization-id 1 \
+# hammer repository create --organization-id 1 \
    --product "CentOS 7 Linux x86_64" \
    --name "CentOS 7 OS x86_64" \
    --label "CentOS_7_OS_x86_64" \
