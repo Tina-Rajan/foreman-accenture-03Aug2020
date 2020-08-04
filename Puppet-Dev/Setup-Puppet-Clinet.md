@@ -4,7 +4,7 @@
 ```
 1. Configure the IP Address - 192.168.56.105 ( /etc/sysconfig/network-scripts/ifcfg-enp0s8 ) 
 2. ifdown enp0s8; ifup enp0s8
-3. Update the hostname:  hostname node105.example.com > /etc/hostname
+3. Update the hostname:  hostname node105.example.com; hostname > /etc/hostname
 4. Update the local Resolver like the following on both the servers ( Puppet Master & Node )  
 ```
 ```
