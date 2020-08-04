@@ -98,8 +98,11 @@ wget -P /etc/pki/rpm-gpg/import/ https://www.centos.org/keys/RPM-GPG-KEY-CentOS-
 
 # Disconnected Channel / Contect Sync
 
-## Download Contect ISO from the mirror link, ( In my case we'll be using CentOS Everything ISO: http://centos.mirror.snu.edu.in/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-Everything-2003.iso )
+## Download Contect ISO from the mirror link, ( In my case we'll be using CentOS Everything ISO) 
 
+```
+Here is the dowoload link : ( http://centos.mirror.snu.edu.in/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-Everything-2003.iso )
+```
 ## Create a Diectory inside Foreman & Host the content of ISO Image via HTTPD.
 
 ```
