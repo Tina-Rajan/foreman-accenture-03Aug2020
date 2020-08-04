@@ -61,3 +61,41 @@ node 'node105.example.com' {
 ```
 puppet agent -t 
 ```
+
+
+
+## Genrate a module 
+```
+yum install pdk -y 
+
+-> Now go to the module dir 
+cd /etc/puppetlabs/code/environments/production/modules/ 
+pdk module generate amitvashist7-linux
+```
+
+## How to call a module
+```
+[root@server101 modules]# cat ../manifests/nodes.pp
+node 'server101.example.com' {
+  include linux
+  include ntpd
+}
+
+
+node 'node105.example.com' {
+  include linux
+  include ntpd
+  include admintools
+}
+
+[root@server101 modules]#
+
+```
+
+
+
+## Build Your Own Module
+
+```
+pdk build admintools --target-dir=/etc/puppetlabs/code/environments/production/modules/
+```
