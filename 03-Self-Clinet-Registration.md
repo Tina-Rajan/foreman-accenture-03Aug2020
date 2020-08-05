@@ -38,7 +38,7 @@ rpm -Uvh /var/www/html/pub/katello-ca-consumer-latest.noarch.rpm
 ```
 yum install subscription-manager wget -y
 wget https://server101.example.com/pub/katello-ca-consumer-latest.noarch.rpm --no-check-certificate
-rpm -Uvh /var/www/html/pub/katello-ca-consumer-latest.noarch.rpm
+rpm -Uvh katello-ca-consumer-latest.noarch.rpm
 ```
 
 
