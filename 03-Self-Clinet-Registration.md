@@ -36,8 +36,9 @@ rpm -Uvh /var/www/html/pub/katello-ca-consumer-latest.noarch.rpm
 
 ### Import / Install Foreman CA Certificate
 ```
-yum install subscription-manger wget -y
+yum install subscription-manager wget -y
 wget https://server101.example.com/pub/katello-ca-consumer-latest.noarch.rpm --no-check-certificate
+rpm -Uvh /var/www/html/pub/katello-ca-consumer-latest.noarch.rpm
 ```
 
 
