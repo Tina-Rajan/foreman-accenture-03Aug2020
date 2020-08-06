@@ -3,6 +3,8 @@
 ## List the Org. 
 ```
 # hammer organization list
+```
+```
 ---|----------------------|----------------------|-----------------------------------------|---------------------
 ID | TITLE                | NAME                 | DESCRIPTION                             | LABEL               
 ---|----------------------|----------------------|-----------------------------------------|---------------------
@@ -14,7 +16,8 @@ ID | TITLE                | NAME                 | DESCRIPTION                  
 ## List the Lifecycle Environments
 ```
 # hammer lifecycle-environment list
-
+```
+```
 ---|-------------------------|------------------------
 ID | NAME                    | PRIOR                  
 ---|-------------------------|------------------------
@@ -32,6 +35,8 @@ ID | NAME                    | PRIOR
 ## List the Content Views
 ```
 #  hammer content-view list
+```
+```
 ----------------|----------------------------|--------------------------------------|-----------|---------------------|---------------
 CONTENT VIEW ID | NAME                       | LABEL                                | COMPOSITE | LAST PUBLISHED      | REPOSITORY IDS
 ----------------|----------------------------|--------------------------------------|-----------|---------------------|---------------
@@ -53,14 +58,14 @@ CONTENT VIEW ID | NAME                       | LABEL                            
 ## List the Activation Key
 ```
 #  hammer activation-key list --organization-id 1
-
+```
+```
 ---|--------------------|----------------|-----------------------|---------------------------
 ID | NAME               | HOST LIMIT     | LIFECYCLE ENVIRONMENT | CONTENT VIEW              
 ---|--------------------|----------------|-----------------------|---------------------------
 1  | Mykey_CentOS7_Dev  | 0 of Unlimited | Devlopement           | CentOS7_Puppet_Custom_View
 3  | Mykey_CentOS7_Prod | 1 of Unlimited | Production            | CentOS7 Packages          
 ---|--------------------|----------------|-----------------------|---------------------------
-
 ```
 
 
@@ -74,6 +79,7 @@ ID | NAME               | HOST LIMIT     | LIFECYCLE ENVIRONMENT | CONTENT VIEW
 ## if you want to Delete the Activation Key
 ```
 # hammer activation-key create --organization-id 1 --name Mykey_CentOS7_Prod --lifecycle-environment Production --content-view CentOS7 Packages --unlimited-hosts
-
+```
+```
 Activation key deleted.
 ```
