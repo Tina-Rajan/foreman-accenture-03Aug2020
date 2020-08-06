@@ -52,3 +52,18 @@ yum install puppet-agent
 cd /opt/puppetlabs/bin/
 ./puppet agent -t --server=server101.example.com
 ```
+
+
+## Now go back to Foreman Puppet Master & Accept the CSR Request / Sign the Certificate
+```
+Dashboard -> Infrastructure -> Smart Proxis -> click on the name -> Select Puppet CA -> Certificates -> sign (node2) cert req.
+```
+
+
+## Now go back to clinet & run puppet agent
+```
+cd /opt/puppetlabs/bin/
+./puppet agent -t 
+```
+
+
