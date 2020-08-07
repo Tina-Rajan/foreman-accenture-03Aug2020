@@ -45,9 +45,9 @@ foreman-installer --scenario katello --foreman-initial-admin-username admin --fo
 --foreman-proxy-dns-zone "example.com" \
 --foreman-proxy-tftp true \
 --foreman-proxy-tftp-managed true \
+--foreman-proxy-tftp-servername "192.168.255.2" \
 --foreman-proxy-puppetca true \
 --foreman-proxy-puppet true
-
 ```
 
 
