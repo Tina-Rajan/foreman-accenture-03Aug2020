@@ -22,6 +22,12 @@
 # ls -ld $BDIR
 ```
 
+## Initiate Online Full Backup excluding Pulp Dir
+```
+# foreman-maintain backup online --skip-pulp-content -y  $BDIR
+```
+
+
 ## Initiate Online Full Backup including Pulp Dir
 ```
 # foreman-maintain backup online -y  $BDIR
